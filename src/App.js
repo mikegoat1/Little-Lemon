@@ -1,17 +1,18 @@
 import './App.css';
+import Header from "./components/Header.js";
+import Main from "./components/Main.js";
+import Footer from "./components/Footer.js"
 
 function App() {
   return (
     <>
-      <header>
-        <nav>
-          Some text
-        </nav>
-      </header>
+      <Header>
+   
+      </Header>
 
-      <main>
+      <Main>
         some more things
-      </main>
+      </Main>
       <footer>
         Extra stuff
       </footer>
