@@ -7,15 +7,15 @@ function App() {
   return (
     <>
       <Header>
-   
+
       </Header>
 
       <Main>
-        some more things
+
       </Main>
-      <footer>
-        Extra stuff
-      </footer>
+      <Footer>
+
+      </Footer>
 
     </>
   );
