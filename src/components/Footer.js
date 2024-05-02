@@ -11,6 +11,9 @@ function Footer() {
                 </VStack>
                 <ul>
                     <li>
+                        Doormat Navigation
+                    </li>
+                    <li>
                         <a href="#home">HOME</a>
                     </li>
                     <li>
@@ -30,11 +33,33 @@ function Footer() {
                     </li>
                 </ul>
                 <VStack>
-
+                    <ul>
+                        <li>Contacts</li>
+                        <li>
+                            <a href="#address">Address</a>
+                        </li>
+                        <li>
+                            <a href="#phone">Phone Number</a>
+                        </li>
+                        <li>
+                            <a href="#email">Email</a>
+                        </li>
+                    </ul>
                 </VStack>
 
                 <VStack>
-
+                    <ul>
+                        <li>Social Media Link</li>
+                        <li>
+                            <a href="#address">Address</a>
+                        </li>
+                        <li>
+                            <a href="#phone">Phone Number</a>
+                        </li>
+                        <li>
+                            <a href="#email">Email</a>
+                        </li>
+                    </ul>
                 </VStack>
 
             </footer>
