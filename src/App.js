@@ -10,13 +10,8 @@ function App() {
       <Header>
         <Nav />
       </Header>
-
-      <Main>
-
-      </Main>
-      <Footer>
-
-      </Footer>
+      <Main></Main>
+      <Footer/>
 
     </>
   );

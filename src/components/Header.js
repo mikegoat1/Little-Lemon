@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header({ children }) {
+const Header = ({ children }) => {
     return (
         <>
             {children}

@@ -1,13 +1,14 @@
 import React from "react";
 import {  HStack, Image, VStack } from "@chakra-ui/react";
+import logo from "../icons_assets/Logo.png";
 
 
-function Footer() {
+const Footer = () => {
     return (
         <HStack>
             <footer>
                 <VStack>
-                    <Image src={"../icons_assets/Logo.png"}></Image>
+                    <Image src={logo}></Image>
                 </VStack>
                 <ul>
                     <li>
@@ -61,7 +62,6 @@ function Footer() {
                         </li>
                     </ul>
                 </VStack>
-
             </footer>
         </HStack>
 
