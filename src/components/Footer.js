@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, HStack, Image, Text, VStack, Box } from "@chakra-ui/react";
+import {  HStack, Image, VStack } from "@chakra-ui/react";
 
 
 function Footer() {
@@ -7,7 +7,7 @@ function Footer() {
         <HStack>
             <footer>
                 <VStack>
-                    <Image></Image>
+                    <Image src={"../icons_assets/Logo.png"}></Image>
                 </VStack>
                 <ul>
                     <li>
