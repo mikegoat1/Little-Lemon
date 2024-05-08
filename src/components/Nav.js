@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Box } from "@chakra-ui/react";
+import { Image, Box} from "@chakra-ui/react";
 import headerLogo from "../icons_assets/Logo.svg"
 
 const links = [{
@@ -48,8 +48,8 @@ const Nav = () => {
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex' }}>
                         {links.map((data, index) => {
                             return (
-                                <li style={{ marginRight: "10px" }}>
-                                    <a href={data.url} key={index} style={{ textDecoration: "none", color: "black", fontWeight:"bold" }}>{data.name}</a>
+                                <li key={index} style={{ marginRight: "10px" }}>
+                                    <a href={data.url}  style={{ textDecoration: "none", color: "black", fontWeight:"bold" }}>{data.name}</a>
                                 </li>
                             )
                         })}

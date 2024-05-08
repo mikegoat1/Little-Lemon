@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Image, Button } from "@chakra-ui/react";
 import heroImage from "../icons_assets/restauranfood.jpg";
 
 
@@ -43,6 +43,14 @@ const Hero = () => {
                         width="50%"
                         margin="0 auto" >
                         We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
+                    </Box>
+                    <Box>
+                        <Button
+                            colorScheme="yellow"
+                            size={"md"}
+                        >
+                            Reserve a Table
+                        </Button>
                     </Box>
                 </Box>
                 {/* This box will contain the image for the hero Link */}
