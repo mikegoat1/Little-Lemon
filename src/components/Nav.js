@@ -49,7 +49,7 @@ const Nav = () => {
                         {links.map((data, index) => {
                             return (
                                 <li style={{ marginRight: "10px" }}>
-                                    <a href={data.url} style={{ textDecoration: "none", color: "black", fontWeight:"bold" }}>{data.name}</a>
+                                    <a href={data.url} key={index} style={{ textDecoration: "none", color: "black", fontWeight:"bold" }}>{data.name}</a>
                                 </li>
                             )
                         })}
