@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, Box} from "@chakra-ui/react";
-import headerLogo from "../icons_assets/Logo.svg"
+import headerLogo from "../icons_assets/LogoHeader.png"
 
 const links = [{
     name: "Home",
@@ -37,13 +37,13 @@ const Nav = () => {
                     display="flex"
                     justifyContent="space-between"
                     px={32}
-                    py={16}
+                    py={8}
                     alignItems="center"
                     fontFamily="Karla"
                     fontSize={20}
                 >
                     <nav>
-                        <Image src={headerLogo} alt="Little Lemon logo"></Image>
+                        <Image src={headerLogo} alt="Little Lemon logo" width={260}></Image>
                     </nav>
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex' }}>
                         {links.map((data, index) => {
