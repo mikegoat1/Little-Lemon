@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Image, Button } from "@chakra-ui/react";
+import { Box, Image, Button, Text } from "@chakra-ui/react";
 import heroImage from "../icons_assets/restauranfood.jpg";
 
 
@@ -12,7 +12,7 @@ const Hero = () => {
             <Box
                 backgroundColor="#495E57"
                 display={"flex"}
-                justifyContent={"center"}
+                justifyContent={"flex-start"}
 
             >
                 {/* This boxes contains the Title, City, Description, and button */}
@@ -24,15 +24,20 @@ const Hero = () => {
                     <Box fontFamily="Markazi Text"
                         fontSize={55}
                         color="#F4CE14"
+                        margin={"0 auto"}
+                        width={"50%"}
                     >
-                        <h1 style={{ marginBottom: "0" }} >Little Lemon</h1>
+                        <h1  >Little Lemon</h1>
                     </Box>
                     <Box
                         fontFamily="Markazi Text"
                         fontSize={40}
                         color={"white"}
-                        margin="0 auto"
-                        lineHeight={0} >
+                        margin={"0 auto"}
+                        width={"50%"}
+                        marginBottom={20}
+                        lineHeight={0}
+                    >
 
                         <h2>Chicago</h2>
                     </Box>
@@ -41,13 +46,21 @@ const Hero = () => {
                         fontSize={18}
                         color={"white"}
                         width="50%"
-                        margin="0 auto" >
-                        We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
+                        margin="0 auto"
+                        marginBottom={20}>
+                        <Text>
+
+                            We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
+
+                        </Text>
                     </Box>
-                    <Box>
+                    <Box
+                        width="50%"
+                        margin="0 auto 8%"
+                    >
                         <Button
                             colorScheme="yellow"
-                            size={"md"}
+                            size={"lg"}
                         >
                             Reserve a Table
                         </Button>
@@ -58,6 +71,9 @@ const Hero = () => {
                     <Image
                         src={heroImage}
                         alt="Restaurant food"
+                        position={"absolute"}
+                        right={"20%"}
+                        top={"15%"}
                         width={375}
                         height={432}
                         borderRadius={18}

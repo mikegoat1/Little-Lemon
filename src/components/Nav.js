@@ -31,7 +31,7 @@ const links = [{
 const Nav = () => {
     return (
         <>
-            <Box maxWidth="1280px" margin="0 auto">
+            <Box maxWidth="1280px" margin="0 20% 0 2%">
 
                 <Box
                     display="flex"
@@ -48,7 +48,7 @@ const Nav = () => {
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex' }}>
                         {links.map((data, index) => {
                             return (
-                                <li key={index} style={{ marginRight: "10px" }}>
+                                <li key={index} style={{ marginRight: "20px" }}>
                                     <a href={data.url}  style={{ textDecoration: "none", color: "black", fontWeight:"bold" }}>{data.name}</a>
                                 </li>
                             )
