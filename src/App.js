@@ -6,6 +6,7 @@ import Main from "./components/Main.js";
 import Footer from "./components/Footer.js"
 import Nav from "./components/Nav.js";
 import Hero from "./components/Hero.js";
+import Special from './components/Specials.js';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         </Header>
         <Main>
           <Hero />
+          <Special/>
         </Main>
         <Footer />
       </ChakraProvider>

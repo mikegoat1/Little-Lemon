@@ -2,7 +2,7 @@ import React from "react";
 import { VStack, Image, Box, Text, HStack, Icon } from "@chakra-ui/react";
 
 
-const Card = () => {
+const Card = ({image, title, price, description}) => {
     return (
         <Box>
             <VStack>
