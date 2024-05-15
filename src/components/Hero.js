@@ -17,8 +17,9 @@ const Hero = () => {
             >
                 {/* This boxes contains the Title, City, Description, and button */}
                 <Box
-                    pt={4} // Add padding top to create space between title and image
-                    pr={4}
+                    pt={6} // Add padding top to create space between title and image
+                    pr={0}
+                    pl={20}
                     zIndex={1}
                 >
                     <Box fontFamily="Markazi Text"
@@ -47,6 +48,7 @@ const Hero = () => {
                         color={"white"}
                         width="50%"
                         margin="0 auto"
+                        pr={400}
                         marginBottom={20}>
                         <Text>
 
@@ -56,7 +58,7 @@ const Hero = () => {
                     </Box>
                     <Box
                         width="50%"
-                        margin="0 auto 8%"
+                        margin="0 auto 2%"
                     >
                         <Button
                             colorScheme="yellow"
