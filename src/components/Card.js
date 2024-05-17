@@ -1,6 +1,7 @@
 import React from "react";
 import { VStack, Image, Box, Text, HStack, Icon } from "@chakra-ui/react";
-
+import {ReactComponent as delivery} from "../icons_assets/delivery.svg"
+console.log(delivery)
 
 const Card = ({ image, title, price, description }) => {
     return (
@@ -41,7 +42,7 @@ const Card = ({ image, title, price, description }) => {
                 </Box>
                 <Box>
                     <Text
-                    width={216}
+                        width={216}
                     >
                         {description}
                         {/* Description */}
@@ -51,15 +52,15 @@ const Card = ({ image, title, price, description }) => {
                     <HStack>
                         {/* Order Delivery  and Icon*/}
                         <Text
-                        fontFamily={"karla"}
-                        fontSize={16}
-                        fontWeight={"bold"}
+                            fontFamily={"karla"}
+                            fontSize={16}
+                            fontWeight={"bold"}
                         >
                             Order a Delivery
                         </Text>
-                        <Icon>
-                            
-                        </Icon>
+                        <Icon as={delivery} />
+
+
                     </HStack>
                 </Box>
             </VStack>
