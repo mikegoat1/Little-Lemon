@@ -5,33 +5,60 @@ import { VStack, Image, Box, Text, HStack, Icon } from "@chakra-ui/react";
 const Card = ({ image, title, price, description }) => {
     return (
         <Box>
-            <VStack>
+            <VStack background={"#EDEFEE"} borderTopRadius={16}>
                 <Box>
                     <Image
                         width={264}
                         height={185}
-                        src={image}>
+                        src={image}
+                        borderTopRadius={16}
+                        border={"1px solid black"}
+                    >
 
                     </Image>
                 </Box>
                 <Box>
-                    <HStack>
+                    <HStack gap={"4.5rem"}>
                         {/* Title and prices */}
+                        <Box
+                            fontFamily={"karla"}
+                            fontSize={18}
+                            fontWeight={"bold"}
+                        >
+                            <Text>{title}</Text>
+                        </Box>
+                        <Box
+                            fontFamily={"karla"}
+                            fontSize={18}
+                            fontWeight={"medium"}
+                            color={"#EE9972"}
+                        >
+                            <Text>
+                                {price}
+                            </Text>
+                        </Box>
                     </HStack>
                 </Box>
                 <Box>
-                    <Text>
+                    <Text
+                    width={216}
+                    >
+                        {description}
                         {/* Description */}
                     </Text>
                 </Box>
                 <Box>
                     <HStack>
                         {/* Order Delivery  and Icon*/}
-                        <Text>
-
+                        <Text
+                        fontFamily={"karla"}
+                        fontSize={16}
+                        fontWeight={"bold"}
+                        >
+                            Order a Delivery
                         </Text>
                         <Icon>
-
+                            
                         </Icon>
                     </HStack>
                 </Box>
