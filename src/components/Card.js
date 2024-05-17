@@ -2,13 +2,16 @@ import React from "react";
 import { VStack, Image, Box, Text, HStack, Icon } from "@chakra-ui/react";
 
 
-const Card = ({image, title, price, description}) => {
+const Card = ({ image, title, price, description }) => {
     return (
         <Box>
             <VStack>
                 <Box>
-                    <Image>
-                        Random Image for Dishes
+                    <Image
+                        width={264}
+                        height={185}
+                        src={image}>
+
                     </Image>
                 </Box>
                 <Box>
