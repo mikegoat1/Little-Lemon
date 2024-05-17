@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "./Card";
 import greekSalad from "../icons_assets/greek salad.jpg";
 import bruchetta from "../icons_assets/bruchetta.svg";
 import lemonDesert from "../icons_assets/lemon dessert.jpg";
@@ -56,6 +57,18 @@ const Special = () => {
                 </HStack>
                 <Box>
                     {/* This will contain all of the cards */}
+                    <HStack>
+                        {cardInfo.map((data, index) => {
+                            return (
+                                <Card
+                                    key={index}
+                                    image={data.image}
+                                    title={data.title}
+                                    price={data.price}
+                                    description={data.description} ></Card>
+                            )
+                        })}
+                    </HStack>
                 </Box>
             </VStack>
         </>
