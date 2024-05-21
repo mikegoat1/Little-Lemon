@@ -1,15 +1,22 @@
 import React from "react";
-import { VStack, HStack, Image, Text, Icon, Box } from "@chakra-ui/react";
+import { VStack, HStack, Image, Text, Box } from "@chakra-ui/react";
+import Ratings from "./Ratings.js";
 
-const CardsTest = () => {
+const CardsTest = ({ rating, name, reviewText }) => {
     return (
         <>
             <VStack>
-                <Box>
-                    <Text>
-                        Ratings
-                    </Text>
-                </Box>
+                <HStack>
+                    <Box>
+                        <Text>
+                            Ratings:
+                        </Text>
+                        <Box>
+                            <Ratings rating={rating}></Ratings>
+                        </Box>
+                    </Box>
+                </HStack>
+
                 <HStack>
                     <Box>
                         <Image>
@@ -19,14 +26,14 @@ const CardsTest = () => {
 
                     <Box>
                         <Text>
-                            Name
+                            {name}
                         </Text>
                     </Box>
                 </HStack>
 
                 <Box>
                     <Text>
-                        Review Text
+                        {reviewText}
                     </Text>
                 </Box>
             </VStack>
