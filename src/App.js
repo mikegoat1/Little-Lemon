@@ -7,7 +7,7 @@ import Footer from "./components/Footer.js"
 import Nav from "./components/Nav.js";
 import Hero from "./components/Hero.js";
 import Special from './components/Specials.js';
-
+import Testimonials from './components/Testimonials.js';
 function App() {
   return (
     <>
@@ -18,6 +18,7 @@ function App() {
         <Main>
           <Hero />
           <Special/>
+          <Testimonials/>
         </Main>
         <Footer />
       </ChakraProvider>
