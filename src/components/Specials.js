@@ -28,9 +28,10 @@ const Special = () => {
     return (
         <>
             <VStack
-                pt={70}
+                pt={100}
             >
                 <HStack
+                    pb={50}
                     margin={"0 auto"}
                     width={"50%"}
                     justifyContent={"space-between"}
@@ -57,7 +58,7 @@ const Special = () => {
                 </HStack>
                 <Box>
                     {/* This will contain all of the cards */}
-                    <HStack>
+                    <HStack alignItems={"start"} gap={"3rem"}>
                         {cardInfo.map((data, index) => {
                             return (
                                 <Card

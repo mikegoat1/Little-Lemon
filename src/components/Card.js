@@ -1,12 +1,11 @@
 import React from "react";
 import { VStack, Image, Box, Text, HStack, Icon } from "@chakra-ui/react";
-import {ReactComponent as delivery} from "../icons_assets/delivery.svg"
-console.log(delivery)
+import { ReactComponent as delivery } from "../icons_assets/delivery.svg"
 
 const Card = ({ image, title, price, description }) => {
     return (
         <Box>
-            <VStack background={"#EDEFEE"} borderTopRadius={16}>
+            <VStack background={"#EDEFEE"} borderTopRadius={16} h={438} justifyContent={"space-between"}>
                 <Box>
                     <Image
                         width={264}
@@ -19,7 +18,7 @@ const Card = ({ image, title, price, description }) => {
                     </Image>
                 </Box>
                 <Box>
-                    <HStack gap={"4.5rem"}>
+                    <HStack  gap={"4.5rem"}>
                         {/* Title and prices */}
                         <Box
                             fontFamily={"karla"}
@@ -49,7 +48,7 @@ const Card = ({ image, title, price, description }) => {
                     </Text>
                 </Box>
                 <Box>
-                    <HStack>
+                    <HStack gap={10} pb={5}>
                         {/* Order Delivery  and Icon*/}
                         <Text
                             fontFamily={"karla"}
@@ -59,8 +58,6 @@ const Card = ({ image, title, price, description }) => {
                             Order a Delivery
                         </Text>
                         <Icon as={delivery} />
-
-
                     </HStack>
                 </Box>
             </VStack>
