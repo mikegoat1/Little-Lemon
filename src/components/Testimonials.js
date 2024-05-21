@@ -12,9 +12,18 @@ const reviews = [
 const Testimonials = () => {
     return (
         <>
-            <VStack>
+            <VStack
+                backgroundColor="#495E57"
+                padding={150}
+            >
                 <Box>
-                    <Heading>Testimonials</Heading>
+                    <Heading
+                        color={"#F4CE14"}
+                        fontFamily="Markazi Text"
+                        fontSize={64}
+                        pb={10}
+
+                    >Testimonials</Heading>
                 </Box>
                 <HStack>
                     {reviews.map((data, index) => {

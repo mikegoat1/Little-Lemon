@@ -5,7 +5,13 @@ import { ReactComponent as delivery } from "../icons_assets/delivery.svg"
 const Card = ({ image, title, price, description }) => {
     return (
         <Box>
-            <VStack background={"#EDEFEE"} borderTopRadius={16} h={438} justifyContent={"space-between"}>
+            <VStack
+                background={"#EDEFEE"}
+                borderTopRadius={16}
+                h={438}
+                justifyContent={"space-between"}
+
+            >
                 <Box>
                     <Image
                         width={264}
@@ -18,7 +24,7 @@ const Card = ({ image, title, price, description }) => {
                     </Image>
                 </Box>
                 <Box>
-                    <HStack  gap={"4.5rem"}>
+                    <HStack gap={"4.5rem"}>
                         {/* Title and prices */}
                         <Box
                             fontFamily={"karla"}

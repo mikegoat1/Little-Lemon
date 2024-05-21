@@ -75,7 +75,7 @@ const Hero = () => {
                         alt="Restaurant food"
                         position={"absolute"}
                         right={"20%"}
-                        top={"12%"}
+                        top={"9%"}
                         width={375}
                         height={432}
                         borderRadius={18}

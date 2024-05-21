@@ -5,7 +5,10 @@ import Ratings from "./Ratings.js";
 const CardsTest = ({ rating, name, reviewText }) => {
     return (
         <>
-            <VStack>
+            <VStack
+                backgroundColor="white"
+
+            >
                 <HStack>
                     <Box>
                         <Text>

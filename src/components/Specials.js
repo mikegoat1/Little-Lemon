@@ -29,6 +29,7 @@ const Special = () => {
         <>
             <VStack
                 pt={100}
+                pb={50}
             >
                 <HStack
                     pb={50}
