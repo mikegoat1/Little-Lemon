@@ -8,12 +8,13 @@ const CardsTest = ({ rating, name, reviewText, image }) => {
             <VStack
                 backgroundColor="white"
                 fontFamily="karla"
-
+                spacing={4}
+                borderRadius="md"
             >
-                <HStack justifyContent={"center"} w={"100%"} pt={5} mr={9}>
+                <HStack justifyContent={"center"} pt={2} >
                     <Box>
                         <Text
-                        fontWeight={"bold"}
+                            fontWeight={"bold"}
                         >
                             Ratings:
                         </Text>
@@ -21,26 +22,29 @@ const CardsTest = ({ rating, name, reviewText, image }) => {
                     <Box>
                         <Ratings rating={rating}></Ratings>
                     </Box>
-
                 </HStack>
 
                 <HStack w={"100%"} justifyContent={"space-evenly"} alignContent={"center"} >
                     <Box>
-                        <Image src={image}>
+                        <Image
+                            src={image}
+                            boxSize="100px"
+                            borderRadius={"md"}
+                        >
 
                         </Image>
                     </Box>
 
                     <Box>
                         <Text
-                        fontWeight={"bold"}
+                            fontWeight={"bold"}
                         >
                             {name}
                         </Text>
                     </Box>
                 </HStack>
 
-                <Box pl={5} pr={5} pt={3} pb={3}fdeswqwesdrfsewaq w={"300px"}>
+                <Box pl={5} pr={5} pt={3} pb={3} fdeswqwesdrfsewaq w={"100%"}>
                     <Text>
                         {reviewText}
                     </Text>

@@ -48,6 +48,7 @@ const Card = ({ image, title, price, description }) => {
                 <Box>
                     <Text
                         width={216}
+                        color={"#495E57"}
                     >
                         {description}
                         {/* Description */}
