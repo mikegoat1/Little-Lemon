@@ -9,7 +9,7 @@ const About = () => {
                 display={"flex"}
                 justifyContent={"space-evenly"}
                 pt={35}
-                pb={70}
+                pb={150}
             >
                 <VStack
 
@@ -20,6 +20,7 @@ const About = () => {
                             fontSize={55}
                             margin={"0 auto"}
                             pr={450}
+                            
                         >Little Lemon</Heading>
                     </Box>
                     <Box
