@@ -8,6 +8,7 @@ import Nav from "./components/Nav.js";
 import Hero from "./components/Hero.js";
 import Special from './components/Specials.js';
 import Testimonials from './components/Testimonials.js';
+import About from './components/About.js';
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
           <Hero />
           <Special/>
           <Testimonials/>
+          <About/>
         </Main>
         <Footer />
       </ChakraProvider>

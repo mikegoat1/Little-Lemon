@@ -5,8 +5,6 @@ import heroImage from "../icons_assets/restauranfood.jpg";
 
 const Hero = () => {
 
-
-
     return (
         <>
             <Box
