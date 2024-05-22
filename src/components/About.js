@@ -8,6 +8,8 @@ const About = () => {
             <HStack
                 display={"flex"}
                 justifyContent={"space-evenly"}
+                pt={35}
+                pb={70}
             >
                 <VStack
 
@@ -17,7 +19,7 @@ const About = () => {
                             fontFamily="Markazi Text"
                             fontSize={55}
                             margin={"0 auto"}
-
+                            pr={450}
                         >Little Lemon</Heading>
                     </Box>
                     <Box
@@ -34,7 +36,7 @@ const About = () => {
                         fontSize={18}
                         width="50%"
                         margin="0 auto"
-                        pr={200}
+                        pr={400}
 
                     >
                         <Text>Meet Adrian and Mario, the passionate duo behind Little Lemon, infusing every dish with Mediterranean charm.
@@ -45,12 +47,26 @@ const About = () => {
                 </VStack>
                 <Box>
                     <Image
-                        w={1000}
+                        alt="Adrian and Mario"
+                        w={"272px"}
+                        h={"338px"}
                         src={imageB}
+                        position={"absolute"}
+                        top={"2200px"}
+                        left={"800px"}
+                        zIndex={1}
+                        objectFit={"cover"}
+
                     ></Image>
                     <Image
+                        alt="Adrian and Mario"
                         src={imageA}
-                        w={1000}
+                        w={"276px"}
+                        h={"338px"}
+                        top={"2125px"}
+                        left={"1000px"}
+                        position={"absolute"}
+                        objectFit={"cover"}
                     ></Image>
                 </Box>
             </HStack>
