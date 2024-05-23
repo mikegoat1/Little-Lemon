@@ -1,7 +1,7 @@
 import React from "react";
-import { Image, Box} from "@chakra-ui/react";
-import headerLogo from "../icons_assets/LogoHeader.png"
+import { Image, Box } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import headerLogo from "../icons_assets/LogoHeader.png"
 
 const links = [{
     name: "Home",
@@ -50,7 +50,7 @@ const Nav = () => {
                         {links.map((data, index) => {
                             return (
                                 <li key={index} style={{ marginRight: "20px" }}>
-                                    <Link href={data.url}  style={{ textDecoration: "none", color: "black", fontWeight:"bold" }}>{data.name}</Link>
+                                    <Link to={data.url} style={{ textDecoration: "none", color: "black", fontWeight: "bold" }}>{data.name}</Link>
                                 </li>
                             )
                         })}

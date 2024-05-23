@@ -19,8 +19,8 @@ const About = () => {
                             fontFamily="Markazi Text"
                             fontSize={55}
                             margin={"0 auto"}
-                            pr={450}
-                            
+                            pr={300}
+
                         >Little Lemon</Heading>
                     </Box>
                     <Box
@@ -28,6 +28,8 @@ const About = () => {
                         width={"50%"}
                         fontFamily="Markazi Text"
                         fontSize={40}
+                        lineHeight={.1}
+                        pb={20}
 
                     >
                         <Text>Chicago</Text>
@@ -37,7 +39,7 @@ const About = () => {
                         fontSize={18}
                         width="50%"
                         margin="0 auto"
-                        pr={400}
+                        pr={200}
 
                     >
                         <Text>Meet Adrian and Mario, the passionate duo behind Little Lemon, infusing every dish with Mediterranean charm.
@@ -46,15 +48,17 @@ const About = () => {
                         </Text>
                     </Box>
                 </VStack>
-                <Box>
+                <Box
+                position={"relative"} width={"50%"}
+                >
                     <Image
                         alt="Adrian and Mario"
                         w={"272px"}
                         h={"338px"}
                         src={imageB}
                         position={"absolute"}
-                        top={"2200px"}
-                        left={"800px"}
+                        top={"-40px"}
+                        right={"400px"}
                         zIndex={1}
                         objectFit={"cover"}
 
@@ -64,8 +68,8 @@ const About = () => {
                         src={imageA}
                         w={"276px"}
                         h={"338px"}
-                        top={"2125px"}
-                        left={"1000px"}
+                        top={"-100px"}
+                        right={"200px"}
                         position={"absolute"}
                         objectFit={"cover"}
                     ></Image>
