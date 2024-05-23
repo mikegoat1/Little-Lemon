@@ -1,30 +1,31 @@
 import React from "react";
 import { Image, Box} from "@chakra-ui/react";
 import headerLogo from "../icons_assets/LogoHeader.png"
+import { Link } from "react-router-dom";
 
 const links = [{
     name: "Home",
-    url: "#home"
+    url: "/"
 },
 {
     name: "About",
-    url: "#about"
+    url: "/about"
 },
 {
     name: "Menu",
-    url: "#menu"
+    url: "/menu"
 },
 {
     name: "Reservations",
-    url: "#reservations"
+    url: "/reservations"
 },
 {
     name: "Order Online",
-    url: "#order_onine"
+    url: "/order_online"
 },
 {
     name: "Login",
-    url: "#login"
+    url: "/login"
 }
 ]
 
@@ -49,7 +50,7 @@ const Nav = () => {
                         {links.map((data, index) => {
                             return (
                                 <li key={index} style={{ marginRight: "20px" }}>
-                                    <a href={data.url}  style={{ textDecoration: "none", color: "black", fontWeight:"bold" }}>{data.name}</a>
+                                    <Link href={data.url}  style={{ textDecoration: "none", color: "black", fontWeight:"bold" }}>{data.name}</Link>
                                 </li>
                             )
                         })}

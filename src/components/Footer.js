@@ -29,37 +29,37 @@ const Footer = () => {
                     <li
                         style={{ fontFamily: "karla", fontSize: "20px", color: "white" }}
                     >
-                        <a href="#home">HOME</a>
+                        <a href="#home">Home</a>
                     </li>
                     <li
                         style={{ fontFamily: "karla", fontSize: "20px", color: "white" }}
 
                     >
-                        <a href="#about">ABOUT</a>
+                        <a href="#about">About</a>
                     </li>
                     <li
                         style={{ fontFamily: "karla", fontSize: "20px", color: "white" }}
 
                     >
-                        <a to="/menu" href="#menu">MENU</a>
+                        <a to="/menu" href="#menu">Menu</a>
                     </li>
                     <li
                         style={{ fontFamily: "karla", fontSize: "20px", color: "white" }}
 
                     >
-                        <a to="/reservations" href="#reservations">RESERVATIONS</a>
+                        <a to="/reservations" href="#reservations">Reservations</a>
                     </li>
                     <li
                         style={{ fontFamily: "karla", fontSize: "20px", color: "white" }}
 
                     >
-                        <a to="/order_online" href="#order_online">ORDER ONLINE</a>
+                        <a to="/order_online" href="#order_online">Order Online</a>
                     </li>
                     <li
                         style={{ fontFamily: "karla", fontSize: "20px", color: "white" }}
 
                     >
-                        <a to="/login" href="#login">LOGIN</a>
+                        <a to="/login" href="#login">Login</a>
                     </li>
                 </ul>
                 <VStack>

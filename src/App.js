@@ -1,6 +1,7 @@
 import './App.css';
 import * as React from "react"
 import { ChakraProvider } from '@chakra-ui/react';
+
 import Header from "./components/Header.js";
 import Main from "./components/Main.js";
 import Footer from "./components/Footer.js"
@@ -9,6 +10,11 @@ import Hero from "./components/Hero.js";
 import Special from './components/Specials.js';
 import Testimonials from './components/Testimonials.js';
 import About from './components/About.js';
+import {  Routes, Route } from "react-router-dom"
+
+
+
+
 function App() {
   return (
     <>
@@ -17,10 +23,23 @@ function App() {
           <Nav />
         </Header>
         <Main>
-          <Hero />
-          <Special/>
-          <Testimonials/>
-          <About/>
+          <Routes>
+            <Route path='/' element={
+              <>
+                <Hero />
+                <Special />
+                <Testimonials />
+                <About />
+              </>
+            }
+            ></Route>
+            <Route path="/about" element={<About />} />
+            {/* <Route path="/about" element={<About />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/reservations" element={<Reservations />} />
+            <Route path="/order_online" element={<OrderOnline />} />
+            <Route path="/login" element={<Login />} /> */}
+          </Routes>
         </Main>
         <Footer />
       </ChakraProvider>
