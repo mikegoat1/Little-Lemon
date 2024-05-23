@@ -8,8 +8,8 @@ const About = () => {
             <HStack
                 display={"flex"}
                 justifyContent={"space-evenly"}
-                pt={35}
-                pb={150}
+                pt={45}
+                pb={200}
             >
                 <VStack
 
