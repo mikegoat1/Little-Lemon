@@ -1,4 +1,3 @@
-import { type } from "@testing-library/user-event/dist/type";
 import { createContext, useContext, useState } from "react";
 
 const AlertContext = createContext(undefined);
@@ -23,4 +22,4 @@ export const AlertProvider = ({ children }) => {
     );
 };
 
-export const useAlertContext = () => useAlertContext(AlertContext);
+export const useAlertContext = () => useContext(AlertContext);
