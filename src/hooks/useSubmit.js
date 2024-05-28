@@ -7,7 +7,7 @@ const useSubmit = () => {
   const [response, setResponse] = useState(null);
 
   const submit = async (url, data) => {
-    const random = Math.random();
+
     setLoading(true);
     try {
       await wait(2000);

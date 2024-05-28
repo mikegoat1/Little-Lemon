@@ -44,7 +44,7 @@ const CardsTest = ({ rating, name, reviewText, image }) => {
                     </Box>
                 </HStack>
 
-                <Box pl={5} pr={5} pt={3} pb={3} fdeswqwesdrfsewaq w={"100%"}>
+                <Box pl={5} pr={5} pt={3} pb={3} w={"100%"}>
                     <Text>
                         {reviewText}
                     </Text>
