@@ -66,7 +66,7 @@ const FormSubmit = () => {
 
                         icon={<IoIosArrowBack size={30} />} />
                 </HStack>
-                <form >
+                <form onSubmit={formik.handleSubmit}>
                     <HStack
                         display={"flex"}
                         justifyContent={"center"}
@@ -80,10 +80,17 @@ const FormSubmit = () => {
                                 boxSize={10}
                             />
                             <FormControl >
-                                <Select placeholder="Select a date" borderColor={"black"}backgroundColor={"white"}>
-                                    <option>MON, MAY 28</option>
-                                    <option>TUE, MAY 29</option>
-                                    <option>WED, MAY 30 </option>
+                                <Select
+                                    id="type"
+                                    name="type"
+                                    placeholder="Select a date"
+                                    borderColor={"black"}
+                                    backgroundColor={"white"}
+
+                                >
+                                    <option value="MON, MAY 28" >MON, MAY 28</option>
+                                    <option value="TUE, MAY 29" >TUE, MAY 29</option>
+                                    <option value="WED, MAY 30" >WED, MAY 30 </option>
                                 </Select>
                             </FormControl>
 
@@ -93,17 +100,27 @@ const FormSubmit = () => {
                                 boxSize={10}
                             />
                             <FormControl>
-                                <Select placeholder="Select a time" borderColor={"black"}backgroundColor={"white"}>
-                                    <option>12:00 PM</option>
-                                    <option>1:00 PM</option>
-                                    <option>2:00 PM</option>
+                                <Select
+                                    id="type"
+                                    name="type"
+                                    placeholder="Select a time"
+                                    borderColor={"black"}
+                                    backgroundColor={"white"}>
+                                    <option value="12:00 PM" >12:00 PM</option>
+                                    <option value="1:00 PM">1:00 PM</option>
+                                    <option value="2:00 PM">2:00 PM</option>
                                 </Select>
                             </FormControl>
                         </Box>
                         <Box display={"flex"} gap={"5%"}>
                             <BsFillPersonFill size={40} />
                             <FormControl>
-                                <Select placeholder="People" borderColor={"black"}backgroundColor={"white"}>
+                                <Select
+                                    id="type"
+                                    name="type"
+                                    placeholder="People"
+                                    borderColor={"black"}
+                                    backgroundColor={"white"}>
                                     <option>1 Person</option>
                                     <option>2 People</option>
                                     <option>3 People</option>
@@ -120,34 +137,78 @@ const FormSubmit = () => {
                     margin={"0 auto"}
                     pt={"5%"}
                     backgroundColor={"#495E57"}
+                    borderBottomRightRadius={"20px"}
+                    borderBottomLeftRadius={"20px"}
                 >
                     <VStack
                         w={"40%"}
                         m={"0 auto"}
                         gap={10}
-                        justifyContent={"cente4r"}
 
                     >
+                        {/* FIRST NAME */}
+                        <FormControl isInvalid={formik.touched.firstName && formik.errors.firstName}>
+                            <FormLabel
+                                htmlFor="firstName"
+                                fontFamily={"karla"}
+                                fontWeight={"bold"}
+                                color={"white"}
+                                fontSize={"20px"}>
+                                FIRST NAME
+                            </FormLabel>
+                            <Input
+                                w={"70%"}
+                                backgroundColor={"white"}
+                                id="firstName"
+                                name="firstName"
+                                {...formik.getFieldProps("firstName")}
+                            >
+                            </Input>
+                            <FormErrorMessage>{formik.errors.firstName}</FormErrorMessage>
+                        </FormControl>
+
+                        {/* LAST NAME */}
+                        <FormControl isInvalid={formik.touched.lastName && formik.errors.lastName} >
+                            <FormLabel
+                                htmlFor="lastName"
+                                fontFamily={"karla"}
+                                fontWeight={"bold"}
+                                color={"white"}
+                                fontSize={"20px"}>
+                                LAST NAME
+                            </FormLabel>
+                            <Input
+                                w={"70%"}
+                                backgroundColor={"white"}
+                                id="lastName"
+                                name="lastName"
+                                {...formik.getFieldProps("lastName")}
+                            >
+                            </Input>
+                            <FormErrorMessage>{formik.errors.lastName}</FormErrorMessage>
+                        </FormControl>
+
+                        {/* EMAILS */}
                         <FormControl >
-                            <FormLabel fontFamily={"karla"} fontWeight={"bold"} color={"white"} fontSize={"20px"}>FIRST NAME</FormLabel>
-                            <Input w={"70%"}backgroundColor={"white"}>
+                            <FormLabel
+                                fontFamily={"karla"}
+                                fontWeight={"bold"}
+                                color={"white"}
+                                fontSize={"20px"}
+                            >EMAIL</FormLabel>
+                            <Input w={"70%"} backgroundColor={"white"}>
 
                             </Input>
                         </FormControl>
-                        <FormControl >
-                            <FormLabel fontFamily={"karla"} fontWeight={"bold"} color={"white"} fontSize={"20px"} >LAST NAME</FormLabel>
-                            <Input w={"70%"}backgroundColor={"white"}>
 
-                            </Input>
-                        </FormControl>
-                        <FormControl >
-                            <FormLabel fontFamily={"karla"} fontWeight={"bold"} color={"white"} fontSize={"20px"} >EMAIL</FormLabel>
-                            <Input w={"70%"}backgroundColor={"white"}>
-
-                            </Input>
-                        </FormControl>
+                        {/* OCCASSIONS */}
                         <FormControl mb={10} >
-                            <FormLabel fontFamily={"karla"} fontWeight={"bold"} color={"white"} fontSize={"20px"} >OCCASSION</FormLabel>
+                            <FormLabel
+                                fontFamily={"karla"}
+                                fontWeight={"bold"}
+                                color={"white"}
+                                fontSize={"20px"}
+                            >OCCASSION</FormLabel>
                             <Input w={"70%"} backgroundColor={"white"}>
 
                             </Input>
@@ -159,10 +220,24 @@ const FormSubmit = () => {
                 w={"30%"}
                 backgroundColor={"#F4CE14"}
                 margin={"0 auto"}
+                borderRadius={"20px"}
 
             >
-                <FormControl display={"flex"} alignItems={"center"} padding={"10%"} mt={20} mb={20} >
-                    <FormLabel fontFamily={"karla"} fontWeight={"bold"} color={"black"} fontSize={"20px"} >PHONE</FormLabel>
+                <FormControl
+                    display={"flex"}
+                    alignItems={"center"}
+                    padding={"10%"}
+                    mt={20}
+                    mb={20}
+
+                >
+                    <FormLabel
+                        fontFamily={"karla"}
+                        fontWeight={"bold"}
+                        color={"black"}
+                        fontSize={"20px"}
+                    >
+                        PHONE</FormLabel>
                     <Input w={"70%"} backgroundColor={"white"}>
 
                     </Input>
@@ -171,18 +246,18 @@ const FormSubmit = () => {
             </Box>
 
             <Box
-                        display={"flex"}
-                        justifyContent={"center"}
-                        width="50%"
-                        margin="0 auto 2%"
-                    >
-                        <Button
-                            colorScheme="yellow"
-                            size={"lg"}
-                        >
-                            Reserve a Table
-                        </Button>
-                    </Box>
+                display={"flex"}
+                justifyContent={"center"}
+                width="50%"
+                margin="0 auto 2%"
+            >
+                <Button
+                    colorScheme="yellow"
+                    size={"lg"}
+                >
+                    Reserve a Table
+                </Button>
+            </Box>
 
         </>
     )
