@@ -10,7 +10,9 @@ import Hero from "./components/Hero.js";
 import Special from './components/Specials.js';
 import Testimonials from './components/Testimonials.js';
 import About from './components/About.js';
-import {  Routes, Route } from "react-router-dom"
+import BookingPage from "./components/BookingPage.js"
+import BookingForm from "./components/BookingForm.js"
+import { Routes, Route } from "react-router-dom"
 
 
 
@@ -34,9 +36,19 @@ function App() {
             }
             ></Route>
             <Route path="/about" element={<About />} />
+            <Route path="/reservations" element={
+              <>
+                <BookingPage>
+                  <BookingForm />
+                </BookingPage>
+              </>
+
+            }
+            ></Route>
+
+
             {/* <Route path="/about" element={<About />} />
             <Route path="/menu" element={<Menu />} />
-            <Route path="/reservations" element={<Reservations />} />
             <Route path="/order_online" element={<OrderOnline />} />
             <Route path="/login" element={<Login />} /> */}
           </Routes>
