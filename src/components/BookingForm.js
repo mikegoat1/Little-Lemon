@@ -53,8 +53,14 @@ const FormSubmit = () => {
 
         <>
             <Box w={"100%"} backgroundColor={"#F4CE14"}>
-                <HStack>
+                <HStack
+
+                    position={"relative"}
+                >
                     <IconButton
+                        top={"20px"}
+                        left={"5%"}
+                        position={"absolute"}
                         aria-label="Back button"
                         variant={"outline"}
                         isRound={"true"}
@@ -63,36 +69,43 @@ const FormSubmit = () => {
                         icon={<IoIosArrowBack size={30} />} />
                 </HStack>
                 <form >
-                    <HStack>
-                        <Box display={"flex"}>
+                    <HStack
+                        display={"flex"}
+                        justifyContent={"center"}
+                        gap={"2%"}
+                        margin={"0 auto"}
+                        pb={"5%"}
+                        pt={"5%"}
+                    >
+                        <Box display={"flex"} gap={"5%"}>
                             <CalendarIcon
                                 boxSize={10}
                             />
                             <FormControl >
-                                <Select placeholder="Select a date">
+                                <Select placeholder="Select a date" borderColor={"black"}>
                                     <option>MON, MAY 28</option>
-                                    <option>TUES, MAY 29</option>
+                                    <option>TUE, MAY 29</option>
                                     <option>WED, MAY 30 </option>
                                 </Select>
                             </FormControl>
 
                         </Box>
-                        <Box display={"flex"}>
+                        <Box display={"flex"} gap={"5%"} >
                             <TimeIcon
                                 boxSize={10}
                             />
                             <FormControl>
-                                <Select placeholder="Select a time">
+                                <Select placeholder="Select a time" borderColor={"black"}>
                                     <option>12:00 PM</option>
                                     <option>1:00 PM</option>
                                     <option>2:00 PM</option>
                                 </Select>
                             </FormControl>
                         </Box>
-                        <Box display={"flex"}>
+                        <Box display={"flex"} gap={"5%"}>
                             <BsFillPersonFill size={40} />
                             <FormControl>
-                                <Select placeholder="People">
+                                <Select placeholder="People" borderColor={"black"}>
                                     <option>1 Person</option>
                                     <option>2 People</option>
                                     <option>3 People</option>
@@ -100,8 +113,65 @@ const FormSubmit = () => {
                             </FormControl>
                         </Box>
                     </HStack>
+
                 </form>
             </Box>
+            <Box>
+                <Box
+                    width={"90%"}
+                    margin={"0 auto"}
+                    pt={"5%"}
+                    backgroundColor={"#495E57"}
+                >
+                    <VStack
+                        w={"40%"}
+                        m={"0 auto"}
+                        gap={10}
+                        justifyContent={"cente4r"}
+
+                    >
+                        <FormControl >
+                            <FormLabel >FIRST NAME</FormLabel>
+                            <Input w={"70%"}>
+
+                            </Input>
+                        </FormControl>
+                        <FormControl >
+                            <FormLabel width={"fit-content"} >LAST NAME</FormLabel>
+                            <Input w={"70%"}>
+
+                            </Input>
+                        </FormControl>
+                        <FormControl >
+                            <FormLabel width={"fit-content"} >EMAIL</FormLabel>
+                            <Input w={"70%"}>
+
+                            </Input>
+                        </FormControl>
+                        <FormControl mb={10} >
+                            <FormLabel width={"fit-content"} >OCCASSION</FormLabel>
+                            <Input w={"70%"}>
+
+                            </Input>
+                        </FormControl>
+                    </VStack>
+                </Box>
+            </Box>
+            <Box
+                w={"30%"}
+                backgroundColor={"#F4CE14"}
+                margin={"0 auto"}
+
+            >
+                <FormControl display={"flex"} padding={"10%"} mt={20} mb={20} >
+                    <FormLabel width={"fit-content"} >PHONE</FormLabel>
+                    <Input w={"70%"} backgroundColor={"white"}>
+
+                    </Input>
+                </FormControl>
+
+            </Box>
+
         </>
     )
 }
