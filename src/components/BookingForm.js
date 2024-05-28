@@ -6,13 +6,11 @@ import {
     FormControl,
     FormErrorMessage,
     FormLabel,
-    Heading,
     Input,
     Select,
-    Textarea,
     VStack,
     HStack,
-    Icon
+    Button
 } from "@chakra-ui/react";
 import { IoIosArrowBack } from "react-icons/io";
 import { BsFillPersonFill } from "react-icons/bs";
@@ -82,7 +80,7 @@ const FormSubmit = () => {
                                 boxSize={10}
                             />
                             <FormControl >
-                                <Select placeholder="Select a date" borderColor={"black"}>
+                                <Select placeholder="Select a date" borderColor={"black"}backgroundColor={"white"}>
                                     <option>MON, MAY 28</option>
                                     <option>TUE, MAY 29</option>
                                     <option>WED, MAY 30 </option>
@@ -95,7 +93,7 @@ const FormSubmit = () => {
                                 boxSize={10}
                             />
                             <FormControl>
-                                <Select placeholder="Select a time" borderColor={"black"}>
+                                <Select placeholder="Select a time" borderColor={"black"}backgroundColor={"white"}>
                                     <option>12:00 PM</option>
                                     <option>1:00 PM</option>
                                     <option>2:00 PM</option>
@@ -105,7 +103,7 @@ const FormSubmit = () => {
                         <Box display={"flex"} gap={"5%"}>
                             <BsFillPersonFill size={40} />
                             <FormControl>
-                                <Select placeholder="People" borderColor={"black"}>
+                                <Select placeholder="People" borderColor={"black"}backgroundColor={"white"}>
                                     <option>1 Person</option>
                                     <option>2 People</option>
                                     <option>3 People</option>
@@ -131,26 +129,26 @@ const FormSubmit = () => {
 
                     >
                         <FormControl >
-                            <FormLabel >FIRST NAME</FormLabel>
-                            <Input w={"70%"}>
+                            <FormLabel fontFamily={"karla"} fontWeight={"bold"} color={"white"} fontSize={"20px"}>FIRST NAME</FormLabel>
+                            <Input w={"70%"}backgroundColor={"white"}>
 
                             </Input>
                         </FormControl>
                         <FormControl >
-                            <FormLabel width={"fit-content"} >LAST NAME</FormLabel>
-                            <Input w={"70%"}>
+                            <FormLabel fontFamily={"karla"} fontWeight={"bold"} color={"white"} fontSize={"20px"} >LAST NAME</FormLabel>
+                            <Input w={"70%"}backgroundColor={"white"}>
 
                             </Input>
                         </FormControl>
                         <FormControl >
-                            <FormLabel width={"fit-content"} >EMAIL</FormLabel>
-                            <Input w={"70%"}>
+                            <FormLabel fontFamily={"karla"} fontWeight={"bold"} color={"white"} fontSize={"20px"} >EMAIL</FormLabel>
+                            <Input w={"70%"}backgroundColor={"white"}>
 
                             </Input>
                         </FormControl>
                         <FormControl mb={10} >
-                            <FormLabel width={"fit-content"} >OCCASSION</FormLabel>
-                            <Input w={"70%"}>
+                            <FormLabel fontFamily={"karla"} fontWeight={"bold"} color={"white"} fontSize={"20px"} >OCCASSION</FormLabel>
+                            <Input w={"70%"} backgroundColor={"white"}>
 
                             </Input>
                         </FormControl>
@@ -163,14 +161,28 @@ const FormSubmit = () => {
                 margin={"0 auto"}
 
             >
-                <FormControl display={"flex"} padding={"10%"} mt={20} mb={20} >
-                    <FormLabel width={"fit-content"} >PHONE</FormLabel>
+                <FormControl display={"flex"} alignItems={"center"} padding={"10%"} mt={20} mb={20} >
+                    <FormLabel fontFamily={"karla"} fontWeight={"bold"} color={"black"} fontSize={"20px"} >PHONE</FormLabel>
                     <Input w={"70%"} backgroundColor={"white"}>
 
                     </Input>
                 </FormControl>
 
             </Box>
+
+            <Box
+                        display={"flex"}
+                        justifyContent={"center"}
+                        width="50%"
+                        margin="0 auto 2%"
+                    >
+                        <Button
+                            colorScheme="yellow"
+                            size={"lg"}
+                        >
+                            Reserve a Table
+                        </Button>
+                    </Box>
 
         </>
     )
