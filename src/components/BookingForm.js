@@ -29,7 +29,6 @@ const FormSubmit = () => {
             firstName: "",
             lastName: "",
             email: "",
-            type: "",
             date: "",
             time: "",
             guestNumber: 0,
@@ -40,9 +39,8 @@ const FormSubmit = () => {
             firstName: Yup.string().required("Required"),
             lastName: Yup.string().required("Required"),
             email: Yup.string().email("Invalid email address").required("Required"),
-            type: Yup.string(),
             occassion: Yup.string(),
-            guestNumber: Yup.number().min(1),
+            guestNumber: Yup.number().min(1, "Guest number at least 1"),
 
         }),
     })
@@ -67,6 +65,8 @@ const FormSubmit = () => {
                         icon={<IoIosArrowBack size={30} />} />
                 </HStack>
                 <form onSubmit={formik.handleSubmit}>
+
+
                     <HStack
                         display={"flex"}
                         justifyContent={"center"}
@@ -75,17 +75,19 @@ const FormSubmit = () => {
                         pb={"5%"}
                         pt={"5%"}
                     >
+                        {/* DATE */}
                         <Box display={"flex"} gap={"5%"}>
                             <CalendarIcon
                                 boxSize={10}
                             />
                             <FormControl >
                                 <Select
-                                    id="type"
-                                    name="type"
+                                    id="date"
+                                    name="date"
                                     placeholder="Select a date"
                                     borderColor={"black"}
                                     backgroundColor={"white"}
+                                    {...formik.getFieldProps("date")}
 
                                 >
                                     <option value="MON, MAY 28" >MON, MAY 28</option>
@@ -95,36 +97,45 @@ const FormSubmit = () => {
                             </FormControl>
 
                         </Box>
+
+                        {/* TIME */}
                         <Box display={"flex"} gap={"5%"} >
                             <TimeIcon
                                 boxSize={10}
                             />
                             <FormControl>
                                 <Select
-                                    id="type"
-                                    name="type"
+                                    id="time"
+                                    name="time"
                                     placeholder="Select a time"
                                     borderColor={"black"}
-                                    backgroundColor={"white"}>
+                                    backgroundColor={"white"}
+                                    {...formik.getFieldProps("time")}
+                                >
                                     <option value="12:00 PM" >12:00 PM</option>
                                     <option value="1:00 PM">1:00 PM</option>
                                     <option value="2:00 PM">2:00 PM</option>
                                 </Select>
                             </FormControl>
                         </Box>
+
+                        {/* PEOPLE */}
                         <Box display={"flex"} gap={"5%"}>
                             <BsFillPersonFill size={40} />
-                            <FormControl>
+                            <FormControl isInvalid={formik.touched.guestNumber && formik.errors.guestNumber} >
                                 <Select
-                                    id="type"
-                                    name="type"
+                                    id="guestNumber"
+                                    name="guestNumber"
                                     placeholder="People"
                                     borderColor={"black"}
-                                    backgroundColor={"white"}>
-                                    <option>1 Person</option>
-                                    <option>2 People</option>
-                                    <option>3 People</option>
+                                    backgroundColor={"white"}
+                                    {...formik.getFieldProps("guestNumber")}
+                                >
+                                    <option value={1}>1 Person</option>
+                                    <option value={2}>2 People</option>
+                                    <option value={3}>3 People</option>
                                 </Select>
+                                <FormErrorMessage>{formik.errors.guestNumber}</FormErrorMessage>
                             </FormControl>
                         </Box>
                     </HStack>
@@ -189,16 +200,25 @@ const FormSubmit = () => {
                         </FormControl>
 
                         {/* EMAILS */}
-                        <FormControl >
+                        <FormControl isInvalid={formik.touched.email && formik.errors.email} >
                             <FormLabel
+                                htmlFor="email"
                                 fontFamily={"karla"}
                                 fontWeight={"bold"}
                                 color={"white"}
-                                fontSize={"20px"}
-                            >EMAIL</FormLabel>
-                            <Input w={"70%"} backgroundColor={"white"}>
+                                fontSize={"20px"}>
+                                EMAIL
+                            </FormLabel>
+                            <Input
+                                w={"70%"}
+                                backgroundColor={"white"}
+                                id="email"
+                                name="email"
+                                {...formik.getFieldProps("email")}
+                            >
 
                             </Input>
+                            <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
                         </FormControl>
 
                         {/* OCCASSIONS */}
@@ -209,7 +229,7 @@ const FormSubmit = () => {
                                 color={"white"}
                                 fontSize={"20px"}
                             >OCCASSION</FormLabel>
-                            <Input w={"70%"} backgroundColor={"white"}>
+                            <Input w={"70%"} backgroundColor={"white"} placeholder="Optional" >
 
                             </Input>
                         </FormControl>
