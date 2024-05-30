@@ -8,7 +8,7 @@ const initializeTimes = () => {
 const updateTimes = (state, action) => {
     switch (action.type) {
         case "UPDATE_TIMES":
-            return ["12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM"];
+            return ["12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM","4:00 PM"];
         default:
             return state;
     }

@@ -19,7 +19,7 @@ import * as Yup from "yup";
 
 const phoneRegExp = /^(?:\+\d{1,3}[- ]?)?\d{10,14}$/;
 
-const FormSubmit = () => {
+const FormSubmit = ({ availableTimes, dispatch }) => {
 
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -29,12 +29,6 @@ const FormSubmit = () => {
     const [guestNumber, setGuestNumber] = useState(0);
     const [occasion, setOccasion] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
-
-    const [availableTimes, setAvailableTimes] = useState([
-        "12:00 PM",
-        "1:00 PM",
-        "2:00 PM"
-    ]);
 
     useEffect(() => {
         console.log(`Updated states:
@@ -68,7 +62,7 @@ const FormSubmit = () => {
             phoneNumber: Yup.string().matches(phoneRegExp, "phone number is not valid.").required("phone number is required.")
 
         }),
-        onSubmit: (values, {setSubmitting}) => {
+        onSubmit: (values, { setSubmitting }) => {
             setSubmitting(true)
             console.log(values);
             setFirstName(values.firstName);
@@ -83,6 +77,12 @@ const FormSubmit = () => {
 
         }
     })
+
+    const handleDateChange = (event) => {
+        const selectedDate = event.target.value;
+        setDate(selectedDate);
+        dispatch({ type: "UPDATE_TIMES", payload: selectedDate });
+    }
 
     return (
 
@@ -128,6 +128,7 @@ const FormSubmit = () => {
                                     borderColor={"black"}
                                     backgroundColor={"white"}
                                     {...formik.getFieldProps("date")}
+                                    onChange={handleDateChange}
 
                                 >
                                     <option value="MON, MAY 28" >MON, MAY 28</option>
@@ -282,7 +283,7 @@ const FormSubmit = () => {
                                     backgroundColor={"white"}
                                     placeholder="Optional"
                                     {...formik.getFieldProps("occasion")}
-                                    >
+                                >
 
                                 </Input>
                             </FormControl>
