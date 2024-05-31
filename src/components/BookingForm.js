@@ -68,7 +68,7 @@ const FormSubmit = ({ availableTimes, dispatch }) => {
             setFirstName(values.firstName);
             setLastName(values.lastName);
             setEmail(values.email);
-            setDate(values.date);
+            // setDate(values.date);
             setTime(values.time);
             setGuestNumber(values.guestNumber);
             setOccasion(values.occasion);
