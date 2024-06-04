@@ -13,6 +13,7 @@ import About from './components/About.js';
 import BookingPage from "./components/BookingPage.js"
 import BookingForm from "./components/BookingForm.js"
 import { Routes, Route } from "react-router-dom"
+import ConfirmedBooking from './components/ConfimredBooking.js';
 
 
 
@@ -45,6 +46,7 @@ function App() {
 
             }
             ></Route>
+            <Route path="/confirmationBooking" element={<ConfirmedBooking/>}/>
 
 
             {/* <Route path="/about" element={<About />} />
