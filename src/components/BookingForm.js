@@ -17,6 +17,7 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { CalendarIcon, TimeIcon } from "@chakra-ui/icons";
 import * as Yup from "yup";
 import { submitAPI } from "../hooks/api";
+import { useNavigate } from "react-router-dom";
 
 const phoneRegExp = /^(?:\+\d{1,3}[- ]?)?\d{10,14}$/;
 
@@ -43,6 +44,8 @@ const FormSubmit = ({ availableTimes, dispatch }) => {
 
 
     }, [firstName, lastName, email, date, time, guestNumber, occasion, phoneNumber])
+
+    const navigate = useNavigate();
 
     const formik = useFormik({
 
@@ -77,6 +80,8 @@ const FormSubmit = ({ availableTimes, dispatch }) => {
             setOccasion(values.occasion);
             setPhoneNumber(values.phoneNumber);
             console.log(submitAPI(values))
+
+            navigate("/confirmationBooking", {state: {...values}});
 
         }
     })
