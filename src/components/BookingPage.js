@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer } from "react";
 import FormSubmit from "./BookingForm";
-import { fetchAPI} from "../hooks/api"
+import { fetchAPI } from "../hooks/api"
 
 
 const initializeTimes = () => {
@@ -21,6 +21,8 @@ const updateTimes = (state, action) => {
 };
 
 const BookingPage = () => {
+
+
     const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
 
     useEffect(() => {
