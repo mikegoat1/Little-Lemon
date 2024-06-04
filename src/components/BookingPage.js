@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer } from "react";
 import FormSubmit from "./BookingForm";
-import { fetchAPI , submitAPI} from "../hooks/api"
+import { fetchAPI} from "../hooks/api"
 
 
 const initializeTimes = () => {

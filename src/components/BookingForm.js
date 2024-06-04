@@ -16,6 +16,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { BsFillPersonFill } from "react-icons/bs";
 import { CalendarIcon, TimeIcon } from "@chakra-ui/icons";
 import * as Yup from "yup";
+import { submitAPI } from "../hooks/api";
 
 const phoneRegExp = /^(?:\+\d{1,3}[- ]?)?\d{10,14}$/;
 
@@ -39,6 +40,8 @@ const FormSubmit = ({ availableTimes, dispatch }) => {
         ${guestNumber},
         ${occasion},
         ${phoneNumber}`)
+
+
     }, [firstName, lastName, email, date, time, guestNumber, occasion, phoneNumber])
 
     const formik = useFormik({
@@ -47,7 +50,7 @@ const FormSubmit = ({ availableTimes, dispatch }) => {
             firstName: "",
             lastName: "",
             email: "",
-            date: "",
+            // date: "",
             time: "",
             guestNumber: 0,
             occasion: "",
@@ -73,15 +76,19 @@ const FormSubmit = ({ availableTimes, dispatch }) => {
             setGuestNumber(values.guestNumber);
             setOccasion(values.occasion);
             setPhoneNumber(values.phoneNumber);
-
+            console.log(submitAPI(values))
 
         }
     })
 
     const handleDateChange = (event) => {
+        event.preventDefault()
         const selectedDate = event.target.value;
-        setDate(selectedDate);
+       setDate(selectedDate);
         dispatch({ type: "UPDATE_TIMES", payload: selectedDate });
+        event.target.placeholder = date
+
+
     }
 
     return (
