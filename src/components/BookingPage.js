@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer } from "react";
-import FormSubmit from "./BookingForm";
+import BookingForm from "./BookingForm";
 import { fetchAPI } from "../hooks/api"
 
 
@@ -31,7 +31,7 @@ const BookingPage = () => {
 
     return (
         <>
-            <FormSubmit availableTimes={availableTimes} dispatch={dispatch} />
+            <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
         </>
     );
 };
