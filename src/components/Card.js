@@ -2,7 +2,7 @@ import React from "react";
 import { VStack, Image, Box, Text, HStack, Icon } from "@chakra-ui/react";
 import { ReactComponent as delivery } from "../icons_assets/delivery.svg"
 
-const Card = ({ image, title, price, description }) => {
+const Card = ({ image, title, price, description, aria }) => {
     return (
         <Box>
             <VStack
@@ -19,6 +19,7 @@ const Card = ({ image, title, price, description }) => {
                         src={image}
                         borderTopRadius={16}
                         border={"1px solid black"}
+                        alt={aria}
                     >
 
                     </Image>
