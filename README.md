@@ -52,3 +52,9 @@ npm test
 - **Local Development:** It runs on localhost for development (http://localhost:3000 by default).
 
 Feel free to adjust the descriptions, paths, and other details based on your specific project setup and requirements. This Markdown file provides a structured overview of your project, its structure, features, technologies used, and how to run it.
+
+High Fidelity Design 
+https://www.figma.com/design/dwhAjhpOq5GcFP1IIqNMC9/Coursera-Capstone?node-id=10-294&t=i9yiNsmmkLmIiK1k-0
+
+WireFrame
+https://www.figma.com/design/dwhAjhpOq5GcFP1IIqNMC9/Coursera-Capstone?node-id=0-1&t=i9yiNsmmkLmIiK1k-0
