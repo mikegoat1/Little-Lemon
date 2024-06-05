@@ -8,8 +8,10 @@ const About = () => {
             <HStack
                 display={"flex"}
                 justifyContent={"space-evenly"}
-                pt={45}
-                pb={200}
+                pt={["30px", "45px"]}
+                pb={["100px", "200px"]}
+                w={"auto"}
+                flexDirection={{sm:"column"}}
             >
                 <VStack
 
@@ -19,7 +21,7 @@ const About = () => {
                             fontFamily="Markazi Text"
                             fontSize={55}
                             margin={"0 auto"}
-                            pr={300} 
+                            pr={{sm:"0px",md:"115px",lg:"250px",xl:"340px"}}
 
                         >Little Lemon</Heading>
                     </Box>
@@ -28,7 +30,7 @@ const About = () => {
                         width={"50%"}
                         fontFamily="Markazi Text"
                         fontSize={40}
-                        lineHeight={.1}
+                        lineHeight={0.5}
                         pb={20}
 
                     >
@@ -39,7 +41,7 @@ const About = () => {
                         fontSize={18}
                         width="50%"
                         margin="0 auto"
-                        pr={200}
+                        pr={{sm:"0px",md:"200px"}}
 
                     >
                         <Text>Meet Adrian and Mario, the passionate duo behind Little Lemon, infusing every dish with Mediterranean charm.
@@ -49,16 +51,17 @@ const About = () => {
                     </Box>
                 </VStack>
                 <Box
-                position={"relative"} width={"50%"}
+                    position={{sm:"none",md:"relative"}} width={"50%"}
+                    display={{sm:"flex" ,md:"block"}} justifyContent={{sm:"center"}} gap={{sm:"18px"}}
                 >
                     <Image
                         alt="Adrian and Mario"
                         w={"272px"}
                         h={"338px"}
                         src={imageB}
-                        position={"absolute"}
-                        top={"-40px"}
-                        right={"400px"}
+                        position={{sm:"none", md:"absolute"}}
+                        top={"-200px"}
+                        right={"-90px"}
                         zIndex={1}
                         objectFit={"cover"}
 
@@ -68,9 +71,9 @@ const About = () => {
                         src={imageA}
                         w={"276px"}
                         h={"338px"}
-                        top={"-100px"}
-                        right={"200px"}
-                        position={"absolute"}
+                        top={"-280px"}
+                        right={"-250px"}
+                        position={{sm:"none", md:"absolute"}}
                         objectFit={"cover"}
                     ></Image>
                 </Box>

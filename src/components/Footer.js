@@ -4,11 +4,13 @@ import logo from "../icons_assets/Logo.png";
 
 const Footer = () => {
     return (
-        <Box as="footer" w="100%" backgroundColor="#495E57" py={10}>
+        <Box as="footer" w="100%" backgroundColor="#495E57" py={10}
+        width="auto"
+
+        >
             <HStack
                 display="flex"
                 justifyContent="space-evenly"
-                width="100%"
                 alignItems="flex-start"
             >
                 <VStack spacing={4} alignItems="flex-start">

@@ -38,6 +38,7 @@ const Testimonials = () => {
             <VStack
                 backgroundColor="#495E57"
                 padding={120}
+                
             >
                 <Box>
                     <Heading
@@ -48,7 +49,7 @@ const Testimonials = () => {
 
                     >Testimonials</Heading>
                 </Box>
-                <HStack alignItems={"stretch"} spacing={10}>
+                <HStack alignItems={"stretch"} spacing={10} flexDirection={{sm:"column",md:"row"}}>
                     {reviews.map((data, index) => {
                         return (
                             <CardsTest

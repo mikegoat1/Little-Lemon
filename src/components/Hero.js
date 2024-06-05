@@ -2,87 +2,75 @@ import React from "react";
 import { Box, Image, Button, Text } from "@chakra-ui/react";
 import heroImage from "../icons_assets/restauranfood.jpg";
 
-
 const Hero = () => {
-
     return (
         <>
             <Box
+                w="full"
                 backgroundColor="#495E57"
-                display={"flex"}
-                justifyContent={"flex-start"}
-
+                display="flex"
+                flexDirection={{ base: "column", md: "row" }}
+                justifyContent="space-between"
+                p={{ base: 4, md: 20 }}
+                alignItems="center"
             >
-                {/* This boxes contains the Title, City, Description, and button */}
                 <Box
-                    pt={6} // Add padding top to create space between title and image
+                    pt={6}
                     pr={0}
-                    pl={20}
+                    pl={{ base: 4, md: 20 }}
                     zIndex={1}
+                    textAlign={{ base: "center", md: "left" }}
+                    flex="1"
                 >
-                    <Box fontFamily="Markazi Text"
-                        fontSize={55}
+                    <Box
+                        fontFamily="Markazi Text"
+                        fontSize={{ base: 40, md: 55 }}
                         color="#F4CE14"
-                        margin={"0 auto"}
-                        width={"50%"}
+                        mb={4}
                     >
-                        <h1  >Little Lemon</h1>
+                        <h1>Little Lemon</h1>
                     </Box>
                     <Box
                         fontFamily="Markazi Text"
-                        fontSize={40}
-                        color={"white"}
-                        margin={"0 auto"}
-                        width={"50%"}
-                        marginBottom={20}
-                        lineHeight={0}
+                        fontSize={{ base: 24, md: 40 }}
+                        color="white"
+                        mb={6}
                     >
-
                         <h2>Chicago</h2>
                     </Box>
                     <Box
                         fontFamily="Karla"
-                        fontSize={18}
-                        color={"white"}
-                        width="50%"
-                        margin="0 auto"
-                        pr={400}
-                        marginBottom={20}>
+                        fontSize={{ base: 14, md: 18 }}
+                        color="white"
+                        mb={6}
+                        maxW="md"
+                        mx={{ base: "auto", md: "0" }}
+                    >
                         <Text>
-
-                            We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
-
+                            We are a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
                         </Text>
                     </Box>
-                    <Box
-                        width="50%"
-                        margin="0 auto 2%"
+                    <Button
+                        colorScheme="yellow"
+                        size="lg"
+                        mx={{ base: "auto", md: "0" }}
                     >
-                        <Button
-                            colorScheme="yellow"
-                            size={"lg"}
-                        >
-                            Reserve a Table
-                        </Button>
-                    </Box>
+                        Reserve a Table
+                    </Button>
                 </Box>
-                {/* This box will contain the image for the hero Link */}
-                <Box>
+                <Box flex="1" display="flex" justifyContent="center" alignItems="center">
                     <Image
                         src={heroImage}
                         alt="Restaurant food"
-                        position={"absolute"}
-                        right={"20%"}
-                        top={"7%"}
-                        width={375}
-                        height={432}
+                        width={{ base: "50%", md: "60%" }}
+                        height="auto"
                         borderRadius={18}
-                    ></Image>
+                        mt={{ base: 8, md: 0 }}
+                    />
                 </Box>
             </Box>
-
         </>
-    )
+    );
 }
 
 export default Hero;

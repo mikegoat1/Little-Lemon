@@ -3,7 +3,7 @@ import Card from "./Card";
 import greekSalad from "../icons_assets/greek salad.jpg";
 import bruchetta from "../icons_assets/bruchetta.svg";
 import lemonDesert from "../icons_assets/lemon dessert.jpg";
-import { Box, Button, VStack, HStack, Text } from "@chakra-ui/react"
+import { Box, Button, VStack, HStack, Text, Stack } from "@chakra-ui/react"
 
 const cardInfo = [
     {
@@ -29,58 +29,67 @@ const cardInfo = [
     }
 ];
 
-
 const Special = () => {
     return (
-        <>
-            <VStack
-                pt={100}
-                pb={50}
+        <VStack
+            pt={{ base: 10, md: 20 }}
+            pb={{ base: 10, md: 20 }}
+            spacing={{ base: 5, md: 10 }}
+        >
+            <HStack
+                pb={{ base: 5, md: 10 }}
+                margin={"0 auto"}
+                width={{ base: "90%", md: "80%", lg: "50%" }}
+                justifyContent={"space-between"}
+                flexDirection={{ base: "column", md: "row" }}
+                alignItems={{ base: "center", md: "flex-start" }}
             >
-                <HStack
-                    pb={50}
-                    margin={"0 auto"}
-                    width={"50%"}
-                    justifyContent={"space-between"}
+                {/* This will contain the button and title. */}
+                <Box
+                    fontFamily="Markazi Text"
+                    fontSize={{ base: 24, md: 40 }}
+                    fontWeight={"regular"}
+                    textAlign={{ base: "center", md: "left" }}
+                    mb={{ base: 5, md: 0 }}
                 >
-                    {/* This will contain the button and title. */}
-                    <Box
-                        fontFamily="Markazi Text"
-                        fontSize={40}
-                        fontWeight={"regular"}
-                    >
-                        <Text>
-                            This Weeks Specials!
-                        </Text>
-                    </Box>
-
-                    <Box>
-                        <Button
-                            colorScheme="yellow"
-                            size={"lg"}
-                        >
-                            Online Menu
-                        </Button>
-                    </Box>
-                </HStack>
-                <Box>
-                    {/* This will contain all of the cards */}
-                    <HStack alignItems={"start"} gap={"3rem"}>
-                        {cardInfo.map((data, index) => {
-                            return (
-                                <Card
-                                    aria={data.aria}
-                                    key={index}
-                                    image={data.image}
-                                    title={data.title}
-                                    price={data.price}
-                                    description={data.description} ></Card>
-                            )
-                        })}
-                    </HStack>
+                    <Text>
+                        This Week's Specials!
+                    </Text>
                 </Box>
-            </VStack>
-        </>
+
+                <Box>
+                    <Button
+                        colorScheme="yellow"
+                        size={"lg"}
+                    >
+                        Online Menu
+                    </Button>
+                </Box>
+            </HStack>
+            <Box
+                width={"100%"}
+            >
+                {/* This will contain all of the cards */}
+                <Stack
+                    direction={{ base: "column", md: "row" }}
+                    alignItems={"center"}
+                    spacing={{ base: 5, md: "3rem" }}
+                    justifyContent={"center"}
+                >
+                    {cardInfo.map((data, index) => {
+                        return (
+                            <Card
+                                aria={data.aria}
+                                key={index}
+                                image={data.image}
+                                title={data.title}
+                                price={data.price}
+                                description={data.description} />
+                        )
+                    })}
+                </Stack>
+            </Box>
+        </VStack>
     )
 }
 
