@@ -1,130 +1,79 @@
 import React from "react";
-import { HStack, Image, VStack } from "@chakra-ui/react";
+import { HStack, Image, VStack, Box, Link, Text } from "@chakra-ui/react";
 import logo from "../icons_assets/Logo.png";
-
 
 const Footer = () => {
     return (
-        <HStack
-            display={"flex"}
-            w={"100%"}
-            backgroundColor="#495E57"
-
-        >
-            <footer
-                style={{ display: "flex", justifyContent: "space-evenly", width: "100%", marginTop: "50px", marginBottom: "50px" }}
-
+        <Box as="footer" w="100%" backgroundColor="#495E57" py={10}>
+            <HStack
+                display="flex"
+                justifyContent="space-evenly"
+                width="100%"
+                alignItems="flex-start"
             >
-                <VStack>
-                    <Image src={logo}></Image>
+                <VStack spacing={4} alignItems="flex-start">
+                    <Image src={logo} alt="Little Lemon logo" />
                 </VStack>
-                <ul
-                    style={{ listStyle: "none" }}
-                >
-                    <li
-                        style={{ color: "#F4CE14", fontFamily: "karla", fontSize: "20px", fontWeight: "bold" }}
-                    >
+                <VStack spacing={4} alignItems="flex-start">
+                    <Text as="h2" color="#F4CE14" fontFamily="Karla" fontSize="20px" fontWeight="bold">
                         Doormat Navigation
-                    </li>
-                    <li
-                        style={{ fontFamily: "karla", fontSize: "20px", color: "white" }}
-                    >
-                        <a href="#home">Home</a>
-                    </li>
-                    <li
-                        style={{ fontFamily: "karla", fontSize: "20px", color: "white" }}
-
-                    >
-                        <a href="#about">About</a>
-                    </li>
-                    <li
-                        style={{ fontFamily: "karla", fontSize: "20px", color: "white" }}
-
-                    >
-                        <a to="/menu" href="#menu">Menu</a>
-                    </li>
-                    <li
-                        style={{ fontFamily: "karla", fontSize: "20px", color: "white" }}
-
-                    >
-                        <a to="/reservations" href="#reservations">Reservations</a>
-                    </li>
-                    <li
-                        style={{ fontFamily: "karla", fontSize: "20px", color: "white" }}
-
-                    >
-                        <a to="/order_online" href="#order_online">Order Online</a>
-                    </li>
-                    <li
-                        style={{ fontFamily: "karla", fontSize: "20px", color: "white" }}
-
-                    >
-                        <a to="/login" href="#login">Login</a>
-                    </li>
-                </ul>
-                <VStack>
-                    <ul
-                        style={{ listStyle: "none" }}
-
-                    >
-                        <li
-                            style={{ color: "#F4CE14", fontFamily: "karla", fontSize: "20px", fontWeight: "bold" }}
-
-                        >Contacts</li>
-                        <li
-                            style={{ fontFamily: "karla", fontSize: "20px", color: "white" }}
-
-                        >
-                            <a href="#address">Address</a>
+                    </Text>
+                    <ul style={{ listStyle: "none", padding: 0 }}>
+                        <li style={{ fontFamily: "Karla", fontSize: "20px", color: "white" }}>
+                            <Link href="#home" color="white" _hover={{ textDecoration: 'underline' }}>Home</Link>
                         </li>
-                        <li
-                            style={{ fontFamily: "karla", fontSize: "20px", color: "white" }}
-
-                        >
-                            <a href="#phone">Phone Number</a>
+                        <li style={{ fontFamily: "Karla", fontSize: "20px", color: "white" }}>
+                            <Link href="#about" color="white" _hover={{ textDecoration: 'underline' }}>About</Link>
                         </li>
-                        <li
-                            style={{ fontFamily: "karla", fontSize: "20px", color: "white" }}
-
-                        >
-                            <a href="#email">Email</a>
+                        <li style={{ fontFamily: "Karla", fontSize: "20px", color: "white" }}>
+                            <Link href="#menu" color="white" _hover={{ textDecoration: 'underline' }}>Menu</Link>
+                        </li>
+                        <li style={{ fontFamily: "Karla", fontSize: "20px", color: "white" }}>
+                            <Link href="#reservations" color="white" _hover={{ textDecoration: 'underline' }}>Reservations</Link>
+                        </li>
+                        <li style={{ fontFamily: "Karla", fontSize: "20px", color: "white" }}>
+                            <Link href="#order_online" color="white" _hover={{ textDecoration: 'underline' }}>Order Online</Link>
+                        </li>
+                        <li style={{ fontFamily: "Karla", fontSize: "20px", color: "white" }}>
+                            <Link href="#login" color="white" _hover={{ textDecoration: 'underline' }}>Login</Link>
                         </li>
                     </ul>
                 </VStack>
-
-                <VStack>
-                    <ul
-                        style={{ listStyle: "none" }}
-
-                    >
-                        <li
-                            style={{ color: "#F4CE14", fontFamily: "karla", fontSize: "20px", fontWeight: "bold" }}
-
-                        >Social Media Link</li>
-                        <li
-                            style={{ fontFamily: "karla", fontSize: "20px", color: "white" }}
-
-                        >
-                            <a href="#address">Address</a>
+                <VStack spacing={4} alignItems="flex-start">
+                    <Text as="h2" color="#F4CE14" fontFamily="Karla" fontSize="20px" fontWeight="bold">
+                        Contacts
+                    </Text>
+                    <ul style={{ listStyle: "none", padding: 0 }}>
+                        <li style={{ fontFamily: "Karla", fontSize: "20px", color: "white" }}>
+                            <Link href="#address" color="white" _hover={{ textDecoration: 'underline' }}>Address</Link>
                         </li>
-                        <li
-                            style={{ fontFamily: "karla", fontSize: "20px", color: "white" }}
-
-                        >
-                            <a href="#phone">Phone Number</a>
+                        <li style={{ fontFamily: "Karla", fontSize: "20px", color: "white" }}>
+                            <Link href="#phone" color="white" _hover={{ textDecoration: 'underline' }}>Phone Number</Link>
                         </li>
-                        <li
-                            style={{ fontFamily: "karla", fontSize: "20px", color: "white" }}
-
-                        >
-                            <a href="#email">Email</a>
+                        <li style={{ fontFamily: "Karla", fontSize: "20px", color: "white" }}>
+                            <Link href="#email" color="white" _hover={{ textDecoration: 'underline' }}>Email</Link>
                         </li>
                     </ul>
                 </VStack>
-            </footer>
-        </HStack>
-
-    )
-}
+                <VStack spacing={4} alignItems="flex-start">
+                    <Text as="h2" color="#F4CE14" fontFamily="Karla" fontSize="20px" fontWeight="bold">
+                        Social Media Links
+                    </Text>
+                    <ul style={{ listStyle: "none", padding: 0 }}>
+                        <li style={{ fontFamily: "Karla", fontSize: "20px", color: "white" }}>
+                            <Link href="#facebook" color="white" _hover={{ textDecoration: 'underline' }}>Facebook</Link>
+                        </li>
+                        <li style={{ fontFamily: "Karla", fontSize: "20px", color: "white" }}>
+                            <Link href="#twitter" color="white" _hover={{ textDecoration: 'underline' }}>Twitter</Link>
+                        </li>
+                        <li style={{ fontFamily: "Karla", fontSize: "20px", color: "white" }}>
+                            <Link href="#instagram" color="white" _hover={{ textDecoration: 'underline' }}>Instagram</Link>
+                        </li>
+                    </ul>
+                </VStack>
+            </HStack>
+        </Box>
+    );
+};
 
 export default Footer;
