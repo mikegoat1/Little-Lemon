@@ -4,41 +4,6 @@
 
 This project is a React-based website for a fictional restaurant called "Little Lemon." The website allows users to view the restaurant's menu, get information about the restaurant, and reserve a table.
 
-## Project Structure
-
-The project is structured as follows:
-
-project-root
-├── src
-│ ├── assets
-│ │ ├── icons_assets
-│ │ │ ├── Mario and Adrian A.jpg
-│ │ │ └── Mario and Adrian b.jpg
-│ │ ├── ... (other images)
-│ ├── components
-│ │ ├── Navbar.js
-│ │ ├── Footer.js
-│ │ ├── Home.js
-│ │ ├── Menu.js
-│ │ └── Reservation.js
-│ ├── App.js
-│ ├── index.js
-│ └── ...
-├── public
-│ ├── index.html
-│ └── ...
-├── jest.config.js
-├── jest.setup.js
-├── package.json
-└── README.md
-
-- **src/assets:** Contains images used throughout the application.
-- **src/components:** Contains reusable UI components like Navbar, Footer, and Menu.
-- **src/pages:** Contains page components like Home and Reservation.
-- **src/App.js:** Main component rendering routes and application structure.
-- **src/index.js:** Entry point for React rendering.
-- **public:** Contains static files and index.html.
-
 ## Technologies Used
 
 - **React:** Used as the frontend library to build the user interface.
