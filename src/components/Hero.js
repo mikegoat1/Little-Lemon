@@ -62,7 +62,7 @@ const Hero = () => {
                     <Image
                         src={heroImage}
                         alt="Restaurant food"
-                        width={{ base: "50%", md: "60%" }}
+                        width={{ base: "50%", md: "70%" }}
                         height="auto"
                         borderRadius={18}
                         mt={{ base: 8, md: 0 }}

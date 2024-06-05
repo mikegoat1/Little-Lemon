@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+Little Lemon Restaurant Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project Description
 
-## Available Scripts
+This project is a React-based website for a fictional restaurant called "Little Lemon." The website allows users to view the restaurant's menu, get information about the restaurant, and reserve a table.
 
-In the project directory, you can run:
+Project Structure
 
-### `npm start`
+The project is structured as follows:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+project-root
+├── src
+│   ├── assets
+│   │   ├── icons_assets
+│   │   │   ├── Mario and Adrian A.jpg
+│   │   │   └── Mario and Adrian b.jpg
+│   │   ├── ... (other images)
+│   ├── components
+│   │   ├── Navbar.js
+│   │   ├── Footer.js
+│   │   ├── Home.js
+│   │   ├── Menu.js
+│   │   └── Reservation.js
+│   ├
+│   │   
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+├── public
+│   ├── index.html
+│   └── ...
+├── jest.config.js
+├── jest.setup.js
+├── package.json
+└── README.md
+src/assets: Contains images used throughout the application.
+src/components: Contains reusable UI components like Navbar, Footer, and Menu.
+src/pages: Contains page components like Home and Reservation.
+src/App.js: Main component rendering routes and application structure.
+src/index.js: Entry point for React rendering.
+public: Contains static files and index.html.
+Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+React: Used as the frontend library to build the user interface.
+Chakra UI: Used for styling and layout components.
+React Router: Used for routing between different pages.
+Features
 
-### `npm test`
+Home Page:
+Displays restaurant information and popular dishes.
+Allows navigation to the menu and reservation pages.
+Menu Page:
+Displays various categories of dishes: main dishes, appetizers, and desserts.
+Each dish includes an image, description, and price.
+Reservation Page:
+Allows users to reserve a table by filling out a form.
+Includes form validation for required fields and email format.
+Displays a success message upon successful reservation.
+Navbar and Footer:
+Navbar: Includes links to navigate between home, menu, and reservation pages.
+Footer: Includes restaurant image, contact information, and social media links.
+How to Run
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone the repository:
 
-### `npm run build`
+git clone https://github.com/mikegoat1/Little-Lemon.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+cd Little-Lemon
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Install dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm install
 
-### `npm run eject`
+Run the application:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Run tests:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+npm test
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Additional Notes
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Deployment: This project is designed for learning and development purposes. Deployment platforms like Netlify or Vercel can be used for hosting.
+Local Development: It runs on localhost for development (http://localhost:3000 by default).
+Feel free to adjust the descriptions, paths, and other details based on your specific project setup and requirements. This Markdown file provides a structured overview of your project, its structure, features, technologies used, and how to run it.
